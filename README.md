@@ -59,6 +59,21 @@ docker-compose up -d
 
 <img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-basic.png" alt="Spring Boot Basic Swagger" width="100%" height="100%"/>
 
+## Oauth2 Authentication
+
+> For Oauth2 authentication, replace the ACTIVE_PROFILE env in the .env file with the following.
+
+```sh
+ACTIVE_PROFILE=oauth2_auth
+```
+
+> Then run this command
+
+```sh
+docker-compose up -d
+```
+
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-oauth2.png" alt="Spring Boot Oauth2 Swagger" width="100%" height="100%"/>
 
 ## Notes
 
