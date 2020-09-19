@@ -19,6 +19,16 @@ EOF'
 docker-compose up -d
 ```
 
+## Swagger
+
+> You can access the swagger from the following url.
+
+http://localhost:9090/api/documentation/swagger-ui/
+
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger.png" alt="Spring Boot Swagger" width="75%" height="75%"/>
+
+
+
 ## Notes
 
 > Keycloak access must be 'keycloak' instead of localhost for token request
