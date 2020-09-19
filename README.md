@@ -25,7 +25,7 @@ docker-compose up -d
 
 http://localhost:9090/api/documentation/swagger-ui/
 
-<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger.png" alt="Spring Boot Swagger" width="75%" height="75%"/>
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger.png" alt="Spring Boot Swagger" width="50%" height="50%"/>
 
 
 
