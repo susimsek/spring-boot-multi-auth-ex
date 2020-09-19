@@ -25,7 +25,7 @@ docker-compose up -d
 
 http://localhost:9090/api/documentation/swagger-ui/
 
-<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger.png" alt="Spring Boot Swagger" width="50%" height="50%"/>
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger.png" alt="Spring Boot Swagger" width="100%" height="100%"/>
 
 ## Jwt Authentication
 
@@ -41,7 +41,24 @@ ACTIVE_PROFILE=jwt_auth
 docker-compose up -d
 ```
 
-<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-jwt.png" alt="Spring Boot Jwt Swagger" width="50%" height="50%"/>
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-jwt.png" alt="Spring Boot Jwt Swagger" width="100%" height="100%"/>
+
+## Basic Authentication
+
+> For basic authentication, replace the ACTIVE_PROFILE env in the .env file with the following.
+
+```sh
+ACTIVE_PROFILE=basic_auth
+```
+
+> Then run this command
+
+```sh
+docker-compose up -d
+```
+
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-basic.png" alt="Spring Boot Basic Swagger" width="100%" height="100%"/>
+
 
 ## Notes
 
