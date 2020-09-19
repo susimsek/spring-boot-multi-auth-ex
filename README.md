@@ -75,6 +75,23 @@ docker-compose up -d
 
 <img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-oauth2.png" alt="Spring Boot Oauth2 Swagger" width="100%" height="100%"/>
 
+## No Authentication
+
+> For disable authentication, replace the ACTIVE_PROFILE env in the .env file with the following.
+
+```sh
+ACTIVE_PROFILE=no_auth
+```
+
+> Then run this command
+
+```sh
+docker-compose up -d
+```
+
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-no-auth.png" alt="Spring Boot No Auth Swagger" width="100%" height="100%"/>
+
+
 ## Notes
 
 > Keycloak access must be 'keycloak' instead of localhost for token request
