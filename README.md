@@ -19,6 +19,11 @@ EOF'
 docker-compose up -d
 ```
 
+## Notes
+
+> Keycloak access must be 'keycloak' instead of localhost for token request
+
+
 ## Used Technologies
 
 * Spring Boot 2.3.3
@@ -107,10 +112,5 @@ docker-compose up -d
 ```
 
 <img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-no-auth.png" alt="Spring Boot No Auth Swagger" width="100%" height="100%"/>
-
-
-## Notes
-
-> Keycloak access must be 'keycloak' instead of localhost for token request
 
 
