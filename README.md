@@ -41,6 +41,8 @@ ACTIVE_PROFILE=jwt_auth
 docker-compose up -d
 ```
 
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/swagger-jwt.png" alt="Spring Boot Jwt Swagger" width="50%" height="50%"/>
+
 ## Notes
 
 > Keycloak access must be 'keycloak' instead of localhost for token request
