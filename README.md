@@ -1,7 +1,7 @@
 # Spring Boot Multi Auth
 > This is spring boot basic auth,jwt auth,ouath2 auth and no auth example.
 >
-<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/spring-boot-multi-auth-ex.png" alt="Spring Boot Multi Auth Example" width="50%" height="50%"/> 
+<img src="https://github.com/susimsek/spring-boot-multi-auth-ex/blob/master/images/spring-boot-multi-auth-ex.png" alt="Spring Boot Multi Auth Example" width="100%" height="100%"/> 
 
 ## Prerequisites
 
