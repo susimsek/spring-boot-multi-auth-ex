@@ -1,0 +1,91 @@
+{
+  "realm" : "spring-boot",
+  "users" : [ {
+    "id" : "216af604-758c-4acb-a101-ce49e8ef250b",
+    "createdTimestamp" : 1600455828066,
+    "username" : "admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Admininstrator",
+    "lastName" : "Admininstrator",
+    "email" : "meet.admin@gmail.com",
+    "credentials" : [ {
+      "id" : "fa783c62-bb8a-4ae3-94d8-749b6f1a9b11",
+      "type" : "password",
+      "createdDate" : 1600455845283,
+      "secretData" : "{\"value\":\"G5HzHogWF+8ML/+oquNcCpAvW8Y4sI+DSxYKhkI2CFcB1tyyHIsJm4gl84q8tpvQdYhw7w25CbpPwGRfIobKYg==\",\"salt\":\"o0nXB0+y+GuOSBOyzZlwuQ==\"}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "rest-api" : [ "ADMIN" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "3e4b37d3-2613-4b7e-9142-f836a557befe",
+    "createdTimestamp" : 1600460314666,
+    "username" : "service-account-rest-api",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "rest-api",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "f194ba00-f924-46f7-8767-f46442853719",
+    "createdTimestamp" : 1600460314808,
+    "username" : "service-account-sso-client",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "sso-client",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "sso-client" : [ "uma_protection" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "1243ed32-7a64-44be-a484-25e357b73fcd",
+    "createdTimestamp" : 1600455879845,
+    "username" : "test",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Şuayb",
+    "lastName" : "Şimşek",
+    "email" : "suaybsimsek58@gmail.com",
+    "credentials" : [ {
+      "id" : "c20d7598-e3e5-4531-b7a7-8e0bd6670a36",
+      "type" : "password",
+      "createdDate" : 1600455893276,
+      "secretData" : "{\"value\":\"YHe6tj68Q7EvErK5WQlnyZCZMoQkj4rcHxU45BqOSQDBJf389O9yNSJf/e4LvBdn1I/uqTBxnvnnce4CuRV6Rw==\",\"salt\":\"zjpmooRcwJQp7YcUieWyAA==\"}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "rest-api" : [ "USER" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

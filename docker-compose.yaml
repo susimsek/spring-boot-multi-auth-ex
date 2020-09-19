@@ -1,0 +1,95 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: app
+    restart: ${RESTART_POLICY}
+    environment:
+      - TZ
+      - SERVER_PORT
+      - API_BASE_PATH
+      - POSTGRES_HOST
+      - POSTGRES_PORT
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - JWT_SECRET
+      - JWT_EXPIRATIONMS
+      - ADMIN_USER
+      - ADMIN_PASS
+      - ACTIVE_PROFILE
+      - KEYCLOAK_HOST
+      - KEYCLOAK_PORT
+      - KEYCLOAK_REALM
+      - KEYCLOAK_CLIENT_ID
+      - KEYCLOAK_CLIENT_SECRET
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+
+  postgresql:
+    image: postgres:11.4
+    container_name: postgresql
+    restart: ${RESTART_POLICY}
+    environment:
+      - TZ
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    command: "
+                postgres
+                  -c max_connections=200
+                  -c logging_collector=on
+                  -c log_min_messages=LOG
+                  -c log_directory=/var/log/postgresql"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgresql-data:/var/lib/postgresql/data:Z
+
+
+  keycloak:
+    image: jboss/keycloak:9.0.3
+    container_name: keycloak
+    restart: ${RESTART_POLICY}
+    depends_on:
+      - keycloak-postgres
+    command:
+      [
+          '-b',
+          '0.0.0.0',
+          '-Djboss.socket.binding.port-offset=1000',
+          '-Djava.net.preferIPv4Stack=true',
+          '-Dkeycloak.profile.feature.upload_scripts=enabled',
+          '-Dkeycloak.migration.action=import',
+          '-Dkeycloak.migration.provider=dir',
+          '-Dkeycloak.migration.dir=/tmp/keycloak-import',
+          '-Dkeycloak.migration.strategy=IGNORE_EXISTING',
+          '-Dkeycloak.migration.usersExportStrategy=SAME_FILE',
+          '-Dkeycloak.migration.realmName=spring-boot'
+      ]
+    environment:
+      - DB_VENDOR
+      - DB_ADDR
+      - DB_DATABASE
+      - DB_USER
+      - DB_SCHEMA
+      - DB_PASSWORD
+      - KEYCLOAK_USER
+      - KEYCLOAK_PASSWORD
+      - PROXY_ADDRESS_FORWARDING
+      - JDBC_PARAMS
+    ports:
+      - 9080:9080
+    volumes:
+      - ./keycloak:/tmp/keycloak-import
+
+  keycloak-postgres:
+    image: postgres:11.4
+    container_name: keycloak-postgres
+    restart: ${RESTART_POLICY}
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=keycloak
+    volumes:
+      - ./data/keycloak:/var/lib/postgresql/data:Z
