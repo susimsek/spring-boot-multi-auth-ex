@@ -19,6 +19,23 @@ EOF'
 docker-compose up -d
 ```
 
+## Used Technologies
+
+* Spring Boot 2.3.3
+* Keycloak
+* Postgresql
+* Swagger
+* Spring Boot Web
+* Spring Boot Security
+* Spring Boot Security Oauth2
+* Spring Boot Validation
+* Spring Boot Jpa
+* Spring Boot Actuator
+* Jjwt
+* Model Mapper
+* Lombok
+* Dev Tools
+
 ## Swagger
 
 > You can access the swagger from the following url.
@@ -96,20 +113,4 @@ docker-compose up -d
 
 > Keycloak access must be 'keycloak' instead of localhost for token request
 
-## Used Technologies
-
-* Spring Boot 2.3.3
-* Keycloak
-* Postgresql
-* Swagger
-* Spring Boot Web
-* Spring Boot Security
-* Spring Boot Security Oauth2
-* Spring Boot Validation
-* Spring Boot Jpa
-* Spring Boot Actuator
-* Jjwt
-* Model Mapper
-* Lombok
-* Dev Tools
 
